@@ -9,7 +9,7 @@ type EventProps = {
 export function Event({ event, times }: EventProps) {
   return (
     <div
-      className="w-full absolute p-3 grid place-items-center"
+      className="w-full absolute p-3 grid place-items-center hover:scale-105 transition-all group ease-linear"
       style={{
         height: `${
           ((event.EndTime - event.StartTime) /
@@ -24,7 +24,7 @@ export function Event({ event, times }: EventProps) {
       }}
     >
       <div
-        className="p-4 pl-6 rounded-md h-full w-full relative box-border justify-between flex flex-col"
+        className="p-4 pl-6 rounded-md h-full shadow-black group-hover:shadow-lg w-full relative box-border justify-between flex flex-col transition-all ease-linear"
         style={{
           backgroundColor: COLORS[event.Color].light,
         }}
